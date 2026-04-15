@@ -43,6 +43,15 @@ export type ExpSummaryChartData = {
     daily_arc_7?: number,
     daily_arc_8?: number,
     daily_arc_9?: number,
+    daily_monpa_arc_1?: number,
+    daily_monpa_arc_2?: number,
+    daily_monpa_arc_3?: number,
+    daily_monpa_arc_4?: number,
+    daily_monpa_arc_5?: number,
+    daily_monpa_arc_6?: number,
+    daily_monpa_arc_7?: number,
+    daily_monpa_arc_8?: number,
+    daily_monpa_arc_9?: number,
     daily_aut_1?: number,
     daily_aut_2?: number,
     daily_aut_3?: number,
@@ -50,6 +59,15 @@ export type ExpSummaryChartData = {
     daily_aut_5?: number,
     daily_aut_6?: number,
     daily_aut_7?: number,
+    daily_monpa_aut_1?: number,
+    daily_monpa_aut_2?: number,
+    daily_monpa_aut_3?: number,
+    daily_monpa_aut_4?: number,
+    daily_monpa_aut_5?: number,
+    daily_monpa_aut_6?: number,
+    daily_monpa_aut_7?: number,
+    daily_monpa_aut_8?: number,
+    daily_monpa_aut_9?: number,
     weekly_arc1_?: number,
     weekly_arc2_?: number,
     weekly_arc3_?: number,
@@ -69,9 +87,17 @@ const chartConfig = {
     label: "デイリー（5次）",
     color: "RGB(52, 199, 89)",
   },
+  daily_monpa_arc: {
+    label: "モンパ（5次）",
+    color: "RGB(255, 105, 135)",
+  },
   daily_aut: {
     label: "デイリー（6次）",
     color: "RGB(175, 82, 222)",
+  },
+  daily_monpa_aut: {
+    label: "モンパ（6次）",
+    color: "RGB(255, 175, 185)",
   },
   weekly_arc: {
     label: "ウィークリー（5次）",
@@ -84,73 +110,143 @@ const chartConfig = {
 
   
   daily_arc_1: {
-    label: "消滅の旅路",
+    label: "デイリー(消滅の旅路)",
     color: "RGB(232, 252, 236)",
   },
   daily_arc_2: {
-    label: "チューチューアイランド",
+    label: "デイリー(チューチューアイランド)",
     color: "RGB(187, 247, 208)",
   },
   daily_arc_3: {
-    label: "レヘルン",
+    label: "デイリー(レヘルン)",
     color: "RGB(134, 239, 172)",
   },
   daily_arc_4: {
-    label: "アルカナ",
+    label: "デイリー(アルカナ)",
     color: "RGB(74, 222, 128)",
   },
   daily_arc_5: {
-    label: "モラス",
+    label: "デイリー(モラス)",
     color: "RGB(34, 197, 94)",
   },
   daily_arc_6: {
-    label: "エスフェラ",
+    label: "デイリー(エスフェラ)",
     color: "RGB(22, 163, 74)",
   },
   daily_arc_7: {
-    label: "ムーンブリッジ",
+    label: "デイリー(ムーンブリッジ)",
     color: "RGB(21, 128, 61)",
   },
   daily_arc_8: {
-    label: "苦痛の迷宮",
+    label: "デイリー(苦痛の迷宮)",
     color: "RGB(22, 163, 74)",
   },
   daily_arc_9: {
-    label: "リメン",
+    label: "デイリー(リメン)",
     color: "RGB(20, 83, 45)",
   },
 
   daily_aut_1: {
-    label: "セルニウム",
+    label: "デイリー(セルニウム)",
     color: "RGB(245, 235, 255)",
   },
   daily_aut_2: {
-    label: "ホテルアルクス",
+    label: "デイリー(ホテルアルクス)",
     color: "RGB(233, 213, 255)",
   },
   daily_aut_3: {
-    label: "オーディウム",
+    label: "デイリー(オーディウム)",
     color: "RGB(216, 180, 254)",
   },
   daily_aut_4: {
-    label: "桃源郷",
+    label: "デイリー(桃源郷)",
     color: "RGB(192, 132, 252)",
   },
   daily_aut_5: {
-    label: "アルテリア",
+    label: "デイリー(アルテリア)",
     color: "RGB(147, 51, 234)",
   },
   daily_aut_6: {
-    label: "カルシオン",
+    label: "デイリー(カルシオン)",
     color: "RGB(126, 34, 206)",
   },
   daily_aut_7: {
-    label: "タラハート",
+    label: "デイリー(タラハート)",
     color: "RGB(107, 33, 168)",
   },
   daily_aut_8: {
-    label: "ギアドラク",
+    label: "デイリー(ギアドラク)",
     color: "RGB(22, 163, 74)",
+  },
+
+  daily_monpa_arc_1: {
+    label: "モンパ(消滅の旅路)",
+    color: "RGB(255, 235, 238)",
+  },
+  daily_monpa_arc_2: {
+    label: "モンパ(チューチューアイランド)",
+    color: "RGB(255, 205, 210)",
+  },
+  daily_monpa_arc_3: {
+    label: "モンパ(レヘルン)",
+    color: "RGB(255, 175, 185)",
+  },
+  daily_monpa_arc_4: {
+    label: "モンパ(アルカナ)",
+    color: "RGB(255, 145, 160)",
+  },
+  daily_monpa_arc_5: {
+    label: "モンパ(モラス)",
+    color: "RGB(255, 105, 135)",
+  },
+  daily_monpa_arc_6: {
+    label: "モンパ(エスフェラ)",
+    color: "RGB(255, 65, 110)",
+  },
+  daily_monpa_arc_7: {
+    label: "モンパ(ムーンブリッジ)",
+    color: "RGB(240, 40, 100)",
+  },
+  daily_monpa_arc_8: {
+    label: "モンパ(苦痛の迷宮)",
+    color: "RGB(220, 20, 80)",
+  },
+  daily_monpa_arc_9: {
+    label: "モンパ(リメン)",
+    color: "RGB(200, 0, 60)",
+  },
+
+  daily_monpa_aut_1: {
+    label: "モンパ(セルニウム)",
+    color: "RGB(255, 235, 238)",
+  },
+  daily_monpa_aut_2: {
+    label: "モンパ(ホテルアルクス)",
+    color: "RGB(255, 205, 210)",
+  },
+  daily_monpa_aut_3: {
+    label: "モンパ(オーディウム)",
+    color: "RGB(255, 175, 185)",
+  },
+  daily_monpa_aut_4: {
+    label: "モンパ(桃源郷)",
+    color: "RGB(255, 145, 160)",
+  },
+  daily_monpa_aut_5: {
+    label: "モンパ(アルテリア)",
+    color: "RGB(255, 105, 135)",
+  },
+  daily_monpa_aut_6: {
+    label: "モンパ(カルシオン)",
+    color: "RGB(255, 65, 110)",
+  },
+  daily_monpa_aut_7: {
+    label: "モンパ(タラハート)",
+    color: "RGB(240, 40, 100)",
+  },
+  daily_monpa_aut_8: {
+    label: "モンパ(ギアドラク)",
+    color: "RGB(220, 20, 80)",
   },
 
   weekly_arc_1: {
@@ -235,7 +331,9 @@ export function ChartExpSummary({expSummaryChartData}: ExpSummaryChartData) {
               content={<ChartLegendContent />}
             /> */}
             <Bar dataKey="デイリー（5次）" fill="var(--color-daily_arc)" radius={1} stackId="a" />
+            <Bar dataKey="モンパ（5次）" fill="var(--color-daily_monpa_arc)" radius={1} stackId="a" />
             <Bar dataKey="デイリー（6次）" fill="var(--color-daily_aut)" radius={1} stackId="a" />
+            <Bar dataKey="モンパ（6次）" fill="var(--color-daily_monpa_aut)" radius={1} stackId="a" />
             <Bar dataKey="ウィークリー（5次）" fill="var(--color-weekly_arc)" radius={1} stackId="a" />
             <Bar dataKey="ウィークリー（6次）" fill="var(--color-weekly_aut)" radius={1} stackId="a" />
             <Bar dataKey="daily_arc_1" fill="var(--color-daily_arc_1)" radius={1} stackId="a" />
@@ -248,6 +346,16 @@ export function ChartExpSummary({expSummaryChartData}: ExpSummaryChartData) {
             <Bar dataKey="daily_arc_8" fill="var(--color-daily_arc_8)" radius={1} stackId="a" />
             <Bar dataKey="daily_arc_9" fill="var(--color-daily_arc_9)" radius={1} stackId="a" />
             <Bar dataKey="daily_arc_10" fill="var(--color-daily_arc_10)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_arc_1" fill="var(--color-daily_monpa_arc_1)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_arc_2" fill="var(--color-daily_monpa_arc_2)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_arc_3" fill="var(--color-daily_monpa_arc_3)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_arc_4" fill="var(--color-daily_monpa_arc_4)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_arc_5" fill="var(--color-daily_monpa_arc_5)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_arc_6" fill="var(--color-daily_monpa_arc_6)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_arc_7" fill="var(--color-daily_monpa_arc_7)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_arc_8" fill="var(--color-daily_monpa_arc_8)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_arc_9" fill="var(--color-daily_monpa_arc_9)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_arc_10" fill="var(--color-daily_monpa_arc_10)" radius={1} stackId="a" />
             <Bar dataKey="daily_aut_1" fill="var(--color-daily_aut_1)" radius={1} stackId="a" />
             <Bar dataKey="daily_aut_2" fill="var(--color-daily_aut_2)" radius={1} stackId="a" />
             <Bar dataKey="daily_aut_3" fill="var(--color-daily_aut_3)" radius={1} stackId="a" />
@@ -255,6 +363,15 @@ export function ChartExpSummary({expSummaryChartData}: ExpSummaryChartData) {
             <Bar dataKey="daily_aut_5" fill="var(--color-daily_aut_5)" radius={1} stackId="a" />
             <Bar dataKey="daily_aut_6" fill="var(--color-daily_aut_6)" radius={1} stackId="a" />
             <Bar dataKey="daily_aut_7" fill="var(--color-daily_aut_7)" radius={1} stackId="a" />
+            <Bar dataKey="daily_aut_8" fill="var(--color-daily_aut_8)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_aut_1" fill="var(--color-daily_monpa_aut_1)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_aut_2" fill="var(--color-daily_monpa_aut_2)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_aut_3" fill="var(--color-daily_monpa_aut_3)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_aut_4" fill="var(--color-daily_monpa_aut_4)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_aut_5" fill="var(--color-daily_monpa_aut_5)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_aut_6" fill="var(--color-daily_monpa_aut_6)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_aut_7" fill="var(--color-daily_monpa_aut_7)" radius={1} stackId="a" />
+            <Bar dataKey="daily_monpa_aut_8" fill="var(--color-daily_monpa_aut_8)" radius={1} stackId="a" />
             <Bar dataKey="weekly_arc_1" fill="var(--color-weekly_arc_1)" radius={1} stackId="a" />
             <Bar dataKey="weekly_arc_2" fill="var(--color-weekly_arc_2)" radius={1} stackId="a" />
             <Bar dataKey="weekly_arc_3" fill="var(--color-weekly_arc_3)" radius={1} stackId="a" />

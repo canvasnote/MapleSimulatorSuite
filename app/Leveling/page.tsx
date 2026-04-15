@@ -152,6 +152,18 @@ export default function Page() {
           + currentValue.daily_arc_8 
           + currentValue.daily_arc_9 
           , 0),
+        'モンパ（5次）' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  
+            accumulator 
+          + currentValue.daily_monpa_arc_1 
+          + currentValue.daily_monpa_arc_2 
+          + currentValue.daily_monpa_arc_3 
+          + currentValue.daily_monpa_arc_4 
+          + currentValue.daily_monpa_arc_5 
+          + currentValue.daily_monpa_arc_6 
+          + currentValue.daily_monpa_arc_7 
+          + currentValue.daily_monpa_arc_8 
+          + currentValue.daily_monpa_arc_9 
+          , 0),
         'デイリー（6次）' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  
             accumulator 
           + currentValue.daily_aut_1 
@@ -163,6 +175,17 @@ export default function Page() {
           + currentValue.daily_aut_7 
           + currentValue.daily_aut_8 
           + currentValue.daily_aut_9 
+          , 0),
+        'モンパ（6次）' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  
+            accumulator 
+          + currentValue.daily_monpa_aut_1 
+          + currentValue.daily_monpa_aut_2 
+          + currentValue.daily_monpa_aut_3 
+          + currentValue.daily_monpa_aut_4 
+          + currentValue.daily_monpa_aut_5 
+          + currentValue.daily_monpa_aut_6 
+          + currentValue.daily_monpa_aut_7 
+          + currentValue.daily_monpa_aut_8 
           , 0),
       },
       {
@@ -176,6 +199,17 @@ export default function Page() {
         'daily_arc_7' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_arc_7, 0),
         'daily_arc_8' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_arc_8, 0),
         'daily_arc_9' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_arc_9, 0),
+        
+        'daily_monpa_arc_1' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_arc_1, 0),
+        'daily_monpa_arc_2' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_arc_2, 0),
+        'daily_monpa_arc_3' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_arc_3, 0),
+        'daily_monpa_arc_4' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_arc_4, 0),
+        'daily_monpa_arc_5' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_arc_5, 0),
+        'daily_monpa_arc_6' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_arc_6, 0),
+        'daily_monpa_arc_7' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_arc_7, 0),
+        'daily_monpa_arc_8' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_arc_8, 0),
+        'daily_monpa_arc_9' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_arc_9, 0),
+
         'daily_aut_1' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_aut_1, 0),
         'daily_aut_2' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_aut_2, 0),
         'daily_aut_3' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_aut_3, 0),
@@ -185,6 +219,15 @@ export default function Page() {
         'daily_aut_7' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_aut_7, 0),
         'daily_aut_8' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_aut_8, 0),
         'daily_aut_9' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_aut_9, 0),
+        
+        'daily_monpa_aut_1' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_aut_1, 0),
+        'daily_monpa_aut_2' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_aut_2, 0),
+        'daily_monpa_aut_3' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_aut_3, 0),
+        'daily_monpa_aut_4' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_aut_4, 0),
+        'daily_monpa_aut_5' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_aut_5, 0),
+        'daily_monpa_aut_6' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_aut_6, 0),
+        'daily_monpa_aut_7' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_aut_7, 0),
+        'daily_monpa_aut_8' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_aut_8, 0),
     }]
   }
 

@@ -18,6 +18,16 @@ export class SimulatorRecord {
     daily_arc_7: number
     daily_arc_8: number
     daily_arc_9: number
+    daily_monpa_arc_1: number
+    daily_monpa_arc_2: number
+    daily_monpa_arc_3: number
+    daily_monpa_arc_4: number
+    daily_monpa_arc_5: number
+    daily_monpa_arc_6: number
+    daily_monpa_arc_7: number
+    daily_monpa_arc_8: number
+    daily_monpa_arc_9: number
+    daily_monpa_arc_10: number
     daily_aut_1: number
     daily_aut_2: number
     daily_aut_3: number
@@ -27,7 +37,14 @@ export class SimulatorRecord {
     daily_aut_7: number
     daily_aut_8: number
     daily_aut_9: number
-    dailyMonpa: number
+    daily_monpa_aut_1: number
+    daily_monpa_aut_2: number
+    daily_monpa_aut_3: number
+    daily_monpa_aut_4: number
+    daily_monpa_aut_5: number
+    daily_monpa_aut_6: number
+    daily_monpa_aut_7: number
+    daily_monpa_aut_8: number
     weekly_arc_1: number
     weekly_arc_2: number
     weekly_arc_3: number
@@ -52,6 +69,16 @@ export class SimulatorRecord {
         daily_arc_7: number,
         daily_arc_8: number,
         daily_arc_9: number,
+        daily_monpa_arc_1: number,
+        daily_monpa_arc_2: number,
+        daily_monpa_arc_3: number,
+        daily_monpa_arc_4: number,
+        daily_monpa_arc_5: number,
+        daily_monpa_arc_6: number,
+        daily_monpa_arc_7: number,
+        daily_monpa_arc_8: number,
+        daily_monpa_arc_9: number,
+        daily_monpa_arc_10: number,
         daily_aut_1: number,
         daily_aut_2: number,
         daily_aut_3: number,
@@ -61,7 +88,14 @@ export class SimulatorRecord {
         daily_aut_7: number,
         daily_aut_8: number,
         daily_aut_9: number,
-        dailyMonpa: number,
+        daily_monpa_aut_1: number,
+        daily_monpa_aut_2: number,
+        daily_monpa_aut_3: number,
+        daily_monpa_aut_4: number,
+        daily_monpa_aut_5: number,
+        daily_monpa_aut_6: number,
+        daily_monpa_aut_7: number,
+        daily_monpa_aut_8: number,
         weekly_arc_1: number,
         weekly_arc_2: number,
         weekly_arc_3: number,
@@ -85,6 +119,16 @@ export class SimulatorRecord {
         this.daily_arc_7 = daily_arc_7
         this.daily_arc_8 = daily_arc_8
         this.daily_arc_9 = daily_arc_9
+        this.daily_monpa_arc_1 = daily_monpa_arc_1
+        this.daily_monpa_arc_2 = daily_monpa_arc_2
+        this.daily_monpa_arc_3 = daily_monpa_arc_3
+        this.daily_monpa_arc_4 = daily_monpa_arc_4
+        this.daily_monpa_arc_5 = daily_monpa_arc_5
+        this.daily_monpa_arc_6 = daily_monpa_arc_6
+        this.daily_monpa_arc_7 = daily_monpa_arc_7
+        this.daily_monpa_arc_8 = daily_monpa_arc_8
+        this.daily_monpa_arc_9 = daily_monpa_arc_9
+        this.daily_monpa_arc_10 = daily_monpa_arc_10
         this.daily_aut_1 = daily_aut_1
         this.daily_aut_2 = daily_aut_2
         this.daily_aut_3 = daily_aut_3
@@ -94,7 +138,14 @@ export class SimulatorRecord {
         this.daily_aut_7 = daily_aut_7
         this.daily_aut_8 = daily_aut_8
         this.daily_aut_9 = daily_aut_9
-        this.dailyMonpa = dailyMonpa
+        this.daily_monpa_aut_1 = daily_monpa_aut_1
+        this.daily_monpa_aut_2 = daily_monpa_aut_2
+        this.daily_monpa_aut_3 = daily_monpa_aut_3
+        this.daily_monpa_aut_4 = daily_monpa_aut_4
+        this.daily_monpa_aut_5 = daily_monpa_aut_5
+        this.daily_monpa_aut_6 = daily_monpa_aut_6
+        this.daily_monpa_aut_7 = daily_monpa_aut_7
+        this.daily_monpa_aut_8 = daily_monpa_aut_8
         this.weekly_arc_1 = weekly_arc_1
         this.weekly_arc_2 = weekly_arc_2
         this.weekly_arc_3 = weekly_arc_3
@@ -146,6 +197,16 @@ export default function simulate(settings: FormState): LevelSimulatorResult {
                 lastExecutedRecord?.daily_arc_7 ? lastExecutedRecord.daily_arc_7 : 0, // dailyArcane7
                 lastExecutedRecord?.daily_arc_8 ? lastExecutedRecord.daily_arc_8 : 0, // dailyArcane8
                 lastExecutedRecord?.daily_arc_9 ? lastExecutedRecord.daily_arc_9 : 0, // dailyArcane9
+                lastExecutedRecord?.daily_monpa_arc_1 ? lastExecutedRecord?.daily_monpa_arc_1 : 0, // daily_monpa_arc_1
+                lastExecutedRecord?.daily_monpa_arc_2 ? lastExecutedRecord?.daily_monpa_arc_2 : 0, // daily_monpa_arc_2
+                lastExecutedRecord?.daily_monpa_arc_3 ? lastExecutedRecord?.daily_monpa_arc_3 : 0, // daily_monpa_arc_3
+                lastExecutedRecord?.daily_monpa_arc_4 ? lastExecutedRecord?.daily_monpa_arc_4 : 0, // daily_monpa_arc_4
+                lastExecutedRecord?.daily_monpa_arc_5 ? lastExecutedRecord?.daily_monpa_arc_5 : 0, // daily_monpa_arc_5
+                lastExecutedRecord?.daily_monpa_arc_6 ? lastExecutedRecord?.daily_monpa_arc_6 : 0, // daily_monpa_arc_6
+                lastExecutedRecord?.daily_monpa_arc_7 ? lastExecutedRecord?.daily_monpa_arc_7 : 0, // daily_monpa_arc_7
+                lastExecutedRecord?.daily_monpa_arc_8 ? lastExecutedRecord?.daily_monpa_arc_8 : 0, // daily_monpa_arc_8
+                lastExecutedRecord?.daily_monpa_arc_9 ? lastExecutedRecord?.daily_monpa_arc_9 : 0, // daily_monpa_arc_9
+                lastExecutedRecord?.daily_monpa_arc_10 ? lastExecutedRecord?.daily_monpa_arc_10 : 0, // daily_monpa_arc_10
                 lastExecutedRecord?.daily_aut_1 ? lastExecutedRecord.daily_aut_1 : 0, // dailyAuthentic1
                 lastExecutedRecord?.daily_aut_2 ? lastExecutedRecord.daily_aut_2 : 0, // dailyAuthentic2
                 lastExecutedRecord?.daily_aut_3 ? lastExecutedRecord.daily_aut_3 : 0, // dailyAuthentic3
@@ -155,7 +216,14 @@ export default function simulate(settings: FormState): LevelSimulatorResult {
                 lastExecutedRecord?.daily_aut_7 ? lastExecutedRecord.daily_aut_7 : 0, // dailyAuthentic7
                 lastExecutedRecord?.daily_aut_8 ? lastExecutedRecord.daily_aut_8 : 0, // dailyAuthentic8
                 lastExecutedRecord?.daily_aut_9 ? lastExecutedRecord.daily_aut_9 : 0, // dailyAuthentic9
-                0, // dailyMonpa
+                lastExecutedRecord?.daily_monpa_aut_1 ? lastExecutedRecord?.daily_monpa_aut_1 : 0, // daily_monpa_aut_1
+                lastExecutedRecord?.daily_monpa_aut_2 ? lastExecutedRecord?.daily_monpa_aut_2 : 0, // daily_monpa_aut_2
+                lastExecutedRecord?.daily_monpa_aut_3 ? lastExecutedRecord?.daily_monpa_aut_3 : 0, // daily_monpa_aut_3
+                lastExecutedRecord?.daily_monpa_aut_4 ? lastExecutedRecord?.daily_monpa_aut_4 : 0, // daily_monpa_aut_4
+                lastExecutedRecord?.daily_monpa_aut_5 ? lastExecutedRecord?.daily_monpa_aut_5 : 0, // daily_monpa_aut_5
+                lastExecutedRecord?.daily_monpa_aut_6 ? lastExecutedRecord?.daily_monpa_aut_6 : 0, // daily_monpa_aut_6
+                lastExecutedRecord?.daily_monpa_aut_7 ? lastExecutedRecord?.daily_monpa_aut_7 : 0, // daily_monpa_aut_7
+                lastExecutedRecord?.daily_monpa_aut_8 ? lastExecutedRecord?.daily_monpa_aut_8 : 0, // daily_monpa_aut_8
                 0, // weeklyArcane1
                 0, // weeklyArcane2
                 0, // weeklyArcane3
@@ -167,7 +235,8 @@ export default function simulate(settings: FormState): LevelSimulatorResult {
                 0  // weeklyEpicDungeon
             )
 
-            const contents = [
+            // レベルに応じたコンテンツを実行する(デイリー)
+            const daily_contents = [
                     {reqLvl: 200, id: 'daily_arc_1', name: '消滅の旅路' },
                     {reqLvl: 210, id: 'daily_arc_2', name: 'チューチューアイランド' },
                     {reqLvl: 220, id: 'daily_arc_3', name: 'レヘルン' },
@@ -186,11 +255,7 @@ export default function simulate(settings: FormState): LevelSimulatorResult {
                     {reqLvl: 290, id: 'daily_aut_7', name: 'タラハート' },
                     {reqLvl: 295, id: 'daily_aut_8', name: 'ギアドラク' },
                 ]
-            
-                    
-                
-            // レベルに応じたコンテンツを実行する
-            contents.forEach(content => {
+            daily_contents.forEach(content => {
                 let execute_content = false
                 switch(content.id){
                     case 'daily_arc_1': { execute_content = settings.dailyArcane1; break; }
@@ -213,12 +278,47 @@ export default function simulate(settings: FormState): LevelSimulatorResult {
                     case 'daily_aut_9': { execute_content = settings.dailyAuthentic9; break; }
                     default: throw new Error("コンテンツ検索に関するエラーです: " + content.id)
                 }
-                
-                
                 if ((execute_content) && (record.currentLevel >= content.reqLvl)){
                     record = executeContent(record, content.id, settings.hyperburning, settings.burningBeyond)
                 }
             });
+
+            // レベルに応じたコンテンツを実行する(通常モンパ)
+            const daily_monpa = [
+                    {reqLvl: 200, id: 'daily_monpa_arc_1', name: '消滅の旅路' },
+                    {reqLvl: 205, id: 'daily_monpa_arc_2', name: 'リバースシティ' },
+                    {reqLvl: 210, id: 'daily_monpa_arc_3', name: 'チューチューアイランド' },
+                    {reqLvl: 215, id: 'daily_monpa_arc_4', name: 'ヤムヤムアイランド' },
+                    {reqLvl: 220, id: 'daily_monpa_arc_5', name: 'レヘルン' },
+                    {reqLvl: 225, id: 'daily_monpa_arc_6', name: 'アルカナ' },
+                    {reqLvl: 230, id: 'daily_monpa_arc_7', name: 'モラス' },
+                    {reqLvl: 235, id: 'daily_monpa_arc_8', name: 'エスフェラ' },
+                    {reqLvl: 245, id: 'daily_monpa_arc_9', name: 'ムーンブリッジ' },
+                    {reqLvl: 250, id: 'daily_monpa_arc_10', name: '苦痛の迷宮' },
+                    {reqLvl: 255, id: 'daily_monpa_arc_9', name: 'リメン' },
+                    {reqLvl: 260, id: 'daily_monpa_aut_1', name: 'セルニウム' },
+                    {reqLvl: 265, id: 'daily_monpa_aut_2', name: 'ホテルアルクス' },
+                    {reqLvl: 270, id: 'daily_monpa_aut_3', name: 'オーディウム' },
+                    {reqLvl: 275, id: 'daily_monpa_aut_4', name: '桃源郷' },
+                    {reqLvl: 280, id: 'daily_monpa_aut_5', name: 'アルテリア' },
+                    {reqLvl: 285, id: 'daily_monpa_aut_6', name: 'カルシオン' },
+                    {reqLvl: 290, id: 'daily_monpa_aut_7', name: 'タラハート' },
+                    // {reqLvl: 295, id: 'daily_monpa_aut_8', name: 'ギアドラク' },
+                ]
+            let monpa_enter_setting = Number(settings.dailyMonpa)
+            let monpa_enter_count = 0
+            while (monpa_enter_count < monpa_enter_setting) {
+                let monpa_enter_switch = 'null'
+                daily_monpa.forEach(content => {
+                    if (record.currentLevel >= content.reqLvl){
+                        monpa_enter_switch = content.id
+                    }
+                });
+                if (monpa_enter_switch !== 'null') { 
+                    record = executeContent(record, monpa_enter_switch, settings.hyperburning, settings.burningBeyond)
+                }
+                monpa_enter_count += 1
+            }
 
             
             // 一通りやることが済んだらその日の結果を格納
@@ -253,7 +353,7 @@ function executeContent(record: SimulatorRecord, contentKind: string, hyperburni
     // レベルアップ処理
     let exp_to_next_level = next_level_exp.findLast( (item) => item.currentlevel === record.currentLevel)?.nextexp
     if (exp_to_next_level === undefined){
-        throw new Error("次レベル経験値に関するエラーです")
+        throw new Error("次レベル経験値に関するエラーです: " + record.currentLevel)
     }
     // alert("curr => " + record.currentExp + "\nnext => " + exp_to_next_level)
     while(record.currentExp >= exp_to_next_level) {
@@ -278,7 +378,7 @@ function executeContent(record: SimulatorRecord, contentKind: string, hyperburni
     // 次レベルまでの経験値を計算
     exp_to_next_level = next_level_exp.findLast((item) => item.currentlevel === record.currentLevel)?.nextexp
     if (exp_to_next_level === undefined){
-        throw new Error("次レベル経験値に関するエラーです")
+        throw new Error("次レベル経験値に関するエラーです: " + record.currentLevel)
     }
     record.currentExpPercent = record.currentExp / exp_to_next_level
     // alert(record.currentExp)
