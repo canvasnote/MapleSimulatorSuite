@@ -1,8 +1,11 @@
 import next_level_exp from "@/app/Leveling/next_level_exp.json"
 import fixed_exp_reward from "@/app/Leveling/fixed_exp_reward.json"
+import monster_park_ex from "@/app/Leveling/monster_park_ex.json"
+import epic_dungeon_exp from "@/app/Leveling/epic_dungeon_exp.json"
 
 import type { FormState } from "@/app/Leveling/page"
 import { settings } from "node:cluster"
+import { tr } from "date-fns/locale"
 
 export class SimulatorRecord {
     date: Date
@@ -53,7 +56,9 @@ export class SimulatorRecord {
     weekly_arc_6: number
     weeklyMonpaEx: number
     weeklyAkatsuki: number
-    weeklyEpicDungeon: number
+    High_Mountain: number
+    Angular_Company: number
+    Nightmare_Paradice: number
 
     constructor(
         date: Date,
@@ -104,7 +109,9 @@ export class SimulatorRecord {
         weekly_arc_6: number,
         weeklyMonpaEx: number,
         weeklyAkatsuki: number,
-        weeklyEpicDungeon: number
+        High_Mountain: number,
+        Angular_Company: number,
+        Nightmare_Paradice: number,
     ) {
         this.date = date
         this.currentLevel = currentLevel
@@ -154,7 +161,9 @@ export class SimulatorRecord {
         this.weekly_arc_6 = weekly_arc_6
         this.weeklyMonpaEx = weeklyMonpaEx
         this.weeklyAkatsuki = weeklyAkatsuki
-        this.weeklyEpicDungeon = weeklyEpicDungeon
+        this.High_Mountain = High_Mountain
+        this.Angular_Company = Angular_Company
+        this.Nightmare_Paradice = Nightmare_Paradice
     }
 }
 
@@ -178,8 +187,11 @@ export default function simulate(settings: FormState): LevelSimulatorResult {
 
     if (startDate && endDate) {
         let currentDate = new Date(startDate)
+        let monpaEx_exetuted = false
+        let epicDungeon_executed = false
         while (currentDate <= endDate) {
 
+            
             const lastExecutedRecord = result.records.findLast( item => item )
             // SimulatorRecord を作成（昨日のレコードがあるなら引き継ぎ、そうでないなら初期化）
             let record = new SimulatorRecord(
@@ -230,9 +242,11 @@ export default function simulate(settings: FormState): LevelSimulatorResult {
                 0, // weeklyArcane4
                 0, // weeklyArcane5
                 0, // weeklyArcane6
-                0, // weeklyMonpaEx
+                lastExecutedRecord?.weeklyMonpaEx ? lastExecutedRecord?.weeklyMonpaEx : 0, // weeklyMonpaEx
                 0, // weeklyAkatsuki
-                0  // weeklyEpicDungeon
+                lastExecutedRecord?.High_Mountain ? lastExecutedRecord?.High_Mountain : 0,  // High_Mountain
+                lastExecutedRecord?.Angular_Company ? lastExecutedRecord?.Angular_Company : 0,  // Angular_Company
+                lastExecutedRecord?.Nightmare_Paradice ? lastExecutedRecord?.Nightmare_Paradice : 0,  // Nightmare_Paradice
             )
 
             // レベルに応じたコンテンツを実行する(デイリー)
@@ -279,7 +293,7 @@ export default function simulate(settings: FormState): LevelSimulatorResult {
                     default: throw new Error("コンテンツ検索に関するエラーです: " + content.id)
                 }
                 if ((execute_content) && (record.currentLevel >= content.reqLvl)){
-                    record = executeContent(record, content.id, settings.hyperburning, settings.burningBeyond)
+                    record = executeContent(record, content.id, settings.hyperburning, settings.burningBeyond, 1)
                 }
             });
 
@@ -315,11 +329,45 @@ export default function simulate(settings: FormState): LevelSimulatorResult {
                     }
                 });
                 if (monpa_enter_switch !== 'null') { 
-                    record = executeContent(record, monpa_enter_switch, settings.hyperburning, settings.burningBeyond)
+                    record = executeContent(record, monpa_enter_switch, settings.hyperburning, settings.burningBeyond, 1)
                 }
                 monpa_enter_count += 1
             }
 
+            // 木曜になったらEXモンパとエピダンをリセット
+            if (currentDate.getDay() === 4) { monpaEx_exetuted = false }
+            if (currentDate.getDay() === 4) { epicDungeon_executed = false }
+
+            // EXモンパを実行
+            if (settings.weeklyMonpaEx && monpaEx_exetuted === false && record.currentLevel >= 260) {
+                monpaEx_exetuted = true
+                record = executeContent(record, 'weeklyMonpaEx', settings.hyperburning, settings.burningBeyond, 1)
+            }
+
+            // エピダンを実行
+            if (settings.weeklyEpicDungeonKind !== "なし" && epicDungeon_executed === false) {
+                epicDungeon_executed = true
+                if (settings.weeklyEpicDungeonKind === "ハイマウンテン" && record.currentLevel >= 260) {
+                    record = executeContent(record, 'High_Mountain', settings.hyperburning, settings.burningBeyond, 1 + Number(settings.weeklyEpicDungeonBonus) * 0.75)
+                }
+                else if (settings.weeklyEpicDungeonKind === "アングラーカンパニー" && record.currentLevel >= 270) {
+                    record = executeContent(record, 'Angular_Company', settings.hyperburning, settings.burningBeyond, 1 + Number(settings.weeklyEpicDungeonBonus) * 0.75)
+                }
+                else if (settings.weeklyEpicDungeonKind === "悪夢仙境" && record.currentLevel >= 280) {
+                    record = executeContent(record, 'Nightmare_Paradice', settings.hyperburning, settings.burningBeyond, 1 + Number(settings.weeklyEpicDungeonBonus) * 0.75)
+                }
+                else if (settings.weeklyEpicDungeonKind === "適正レベル") {
+                    if (record.currentLevel >= 280){
+                        record = executeContent(record, 'Nightmare_Paradice', settings.hyperburning, settings.burningBeyond, 1 + Number(settings.weeklyEpicDungeonBonus) * 0.75)
+                    }
+                    else if (record.currentLevel >= 270){
+                        record = executeContent(record, 'Angular_Company', settings.hyperburning, settings.burningBeyond, 1 + Number(settings.weeklyEpicDungeonBonus) * 0.75)
+                    }
+                    else if (record.currentLevel >= 260){
+                        record = executeContent(record, 'High_Mountain', settings.hyperburning, settings.burningBeyond, 1 + Number(settings.weeklyEpicDungeonBonus) * 0.75)
+                    }
+                }
+            }
             
             // 一通りやることが済んだらその日の結果を格納
             currentLevel = record.currentLevel
@@ -334,14 +382,37 @@ export default function simulate(settings: FormState): LevelSimulatorResult {
     return result
 }
 
-function executeContent(record: SimulatorRecord, contentKind: string, hyperburning: boolean, burningBeyond: boolean) {
-    // console.log("wtf")
+function executeContent(record: SimulatorRecord, contentKind: string, hyperburning: boolean, burningBeyond: boolean, multiplier: number) {
     // 実行するコンテンツの経験値を取得
-    const content =  fixed_exp_reward.findLast( (item) => item.content === contentKind )
+    // 通常コンテンツ(固定経験値)
+    let content =  fixed_exp_reward.findLast( (item) => item.content === contentKind )
     if (content === undefined){
-        throw new Error("コンテンツ経験値に関するエラーです: " + contentKind)
+        // モンパEX
+        if (contentKind === 'weeklyMonpaEx'){
+            const content_monpaex = monster_park_ex.findLast( (item) => item.level === record.currentLevel) 
+            
+            if (content_monpaex !== undefined){
+                content = {content: 'weekly_monpaex', exp: content_monpaex.exp}
+            }
+            else{
+                throw new Error("コンテンツ経験値に関するエラーです: " + contentKind)
+            }
+        }
+        else if (contentKind === 'High_Mountain' || contentKind === 'Angular_Company' || contentKind === 'Nightmare_Paradice'){
+            // エピダン
+            const content_epicDungeon = epic_dungeon_exp.findLast( (item) => item.id === contentKind && item.level === record.currentLevel)
+            if (content_epicDungeon !== undefined){
+                content = {content: content_epicDungeon.id, exp: content_epicDungeon.exp}
+            }
+            else{
+                throw new Error("コンテンツ経験値に関するエラーです: " + contentKind)
+            }
+        }
+        else{
+            throw new Error("コンテンツ経験値に関するエラーです: " + contentKind)
+        }
     }
-    const accumulated_exp = content.exp
+    const accumulated_exp = content.exp * multiplier
 
     // コンテンツの経験値を得る
     record.currentExp += accumulated_exp

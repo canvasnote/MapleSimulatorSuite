@@ -107,6 +107,10 @@ const chartConfig = {
     label: "ウィークリー（6次）",
     color: "RGB(0, 122, 255)",
   },
+  weekly_epic: {
+    label: "エピックダンジョン",
+    color: "RGB(96, 165, 250)",
+  },
 
   
   daily_arc_1: {
@@ -336,6 +340,8 @@ export function ChartExpSummary({expSummaryChartData}: ExpSummaryChartData) {
             <Bar dataKey="モンパ（6次）" fill="var(--color-daily_monpa_aut)" radius={1} stackId="a" />
             <Bar dataKey="ウィークリー（5次）" fill="var(--color-weekly_arc)" radius={1} stackId="a" />
             <Bar dataKey="ウィークリー（6次）" fill="var(--color-weekly_aut)" radius={1} stackId="a" />
+            <Bar dataKey="モンパEX" fill="var(--color-weekly_monpaex)" radius={1} stackId="a" />
+            <Bar dataKey="エピックダンジョン" fill="var(--color-weekly_epic)" radius={1} stackId="a" />
             <Bar dataKey="daily_arc_1" fill="var(--color-daily_arc_1)" radius={1} stackId="a" />
             <Bar dataKey="daily_arc_2" fill="var(--color-daily_arc_2)" radius={1} stackId="a" />
             <Bar dataKey="daily_arc_3" fill="var(--color-daily_arc_3)" radius={1} stackId="a" />
@@ -380,9 +386,9 @@ export function ChartExpSummary({expSummaryChartData}: ExpSummaryChartData) {
             <Bar dataKey="weekly_arc_6" fill="var(--color-weekly_arc_6)" radius={1} stackId="a" />
             <Bar dataKey="weekly_monpaex" fill="var(--color-weekly_monpaex)" radius={1} stackId="a" />
             <Bar dataKey="weekly_akatsuki" fill="var(--color-weekly_akatsuki)" radius={1} stackId="a" />
-            <Bar dataKey="weekly_epic_1" fill="var(--color-weekly_epic1)" radius={1} stackId="a" />
-            <Bar dataKey="weekly_epic_2" fill="var(--color-weekly_epic2)" radius={1} stackId="a" />
-            <Bar dataKey="weekly_epic_3" fill="var(--color-weekly_epic3)" radius={1} stackId="a" />
+            <Bar dataKey="High_Mountain" fill="var(--color-weekly_epic_1)" radius={1} stackId="a" />
+            <Bar dataKey="Angular_Company" fill="var(--color-weekly_epic_2)" radius={1} stackId="a" />
+            <Bar dataKey="Nightmare_Paradice" fill="var(--color-weekly_epic_3)" radius={1} stackId="a" />
           </BarChart>
         </ChartContainer>
       </CardContent>

@@ -187,6 +187,13 @@ export default function Page() {
           + currentValue.daily_monpa_aut_7 
           + currentValue.daily_monpa_aut_8 
           , 0),
+          'モンパEX': levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.weeklyMonpaEx, 0),
+          'エピックダンジョン': levelSimulatorResult.records.reduce( (accumulator, currentValue) =>
+            accumulator 
+          + currentValue.High_Mountain
+          + currentValue.Angular_Company
+          + currentValue.Nightmare_Paradice
+          , 0),
       },
       {
         'content': '詳細',
@@ -228,6 +235,11 @@ export default function Page() {
         'daily_monpa_aut_6' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_aut_6, 0),
         'daily_monpa_aut_7' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_aut_7, 0),
         'daily_monpa_aut_8' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_monpa_aut_8, 0),
+
+        'weekly_monpaex': levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.weeklyMonpaEx, 0),
+        'High_Mountain' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.High_Mountain, 0),
+        'Angular_Company' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.Angular_Company, 0),
+        'Nightmare_Paradice' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.Nightmare_Paradice, 0),
     }]
   }
 
@@ -725,9 +737,9 @@ export default function Page() {
                         </SelectTrigger>
                         <SelectContent>
                           <SelectGroup>
-                            <SelectItem value="0">ボーナス0回</SelectItem>
-                            <SelectItem value="5">ボーナス5回</SelectItem>
-                            <SelectItem value="10">ボーナス10回</SelectItem>
+                            <SelectItem value="0">ボーナス0回(+0%)</SelectItem>
+                            <SelectItem value="5">ボーナス5回(+375%)</SelectItem>
+                            <SelectItem value="10">ボーナス10回(+750%)</SelectItem>
                           </SelectGroup>
                         </SelectContent>
                       </Select>
