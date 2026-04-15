@@ -34,9 +34,14 @@ import { DatePickerDemo } from "./datepicker"
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
 import { ChartExpSummary } from "@/app/Leveling/chart/chart-exp-summary"
-import { ChartDateLevel } from "@/app/Leveling/chart/chart-date-level"
+import { ChartDateLevel,  } from "@/app/Leveling/chart/chart-date-level"
+import type {ExpSummaryChartData} from "@/app/Leveling/chart/chart-date-level"
 
-type FormState = {
+import simulator, { LevelSimulatorResult } from "@/app/Leveling/simulator"
+
+import SimulatorRecord from "@/app/Leveling/simulator"
+
+export type FormState = {
   startDate?: Date
   endDate?: Date
   startLevel: string
@@ -49,6 +54,18 @@ type FormState = {
   dailyArcane4: boolean
   dailyArcane5: boolean
   dailyArcane6: boolean
+  dailyArcane7: boolean
+  dailyArcane8: boolean
+  dailyArcane9: boolean
+  dailyAuthentic1: boolean
+  dailyAuthentic2: boolean
+  dailyAuthentic3: boolean
+  dailyAuthentic4: boolean
+  dailyAuthentic5: boolean
+  dailyAuthentic6: boolean
+  dailyAuthentic7: boolean
+  dailyAuthentic8: boolean
+  dailyAuthentic9: boolean
   dailyMonpa: string
   weeklyArcane1: string
   weeklyArcane2: string
@@ -76,6 +93,18 @@ export default function Page() {
     dailyArcane4: false,
     dailyArcane5: false,
     dailyArcane6: false,
+    dailyArcane7: false,
+    dailyArcane8: false,
+    dailyArcane9: false,
+    dailyAuthentic1: false,
+    dailyAuthentic2: false,
+    dailyAuthentic3: false,
+    dailyAuthentic4: false,
+    dailyAuthentic5: false,
+    dailyAuthentic6: false,
+    dailyAuthentic7: false,
+    dailyAuthentic8: false,
+    dailyAuthentic9: false,
     dailyMonpa: "0",
     weeklyArcane1: "0",
     weeklyArcane2: "0",
@@ -98,10 +127,82 @@ export default function Page() {
     setForm((prev) => ({ ...prev, [name]: checked === true }))
   }
 
+  const [finalLevel, setFinalLevel] = useState(Number)
+  const [finalLevelPercent, setFinalLevelPercent] = useState(Number)
+  const [levelSimulatorResult, setLevelSimulatorResult] = useState<LevelSimulatorResult>(new LevelSimulatorResult([]))
+  // const [levelTransition, setLevelTransition] = useState(typeof ExpSummaryChartData)
+
+  const toLevelTransition = (levelSimulatorResult: LevelSimulatorResult) => {
+    return levelSimulatorResult.records.map( (record)  => {return { "date": record.date.toLocaleDateString(), "level": record.currentLevel + record.currentExpPercent} })
+  }
+
+  const toExpSummary = (levelSimulatorResult: LevelSimulatorResult) => {
+    return [
+      {
+        'content': '全体',
+        'デイリー（5次）' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  
+            accumulator 
+          + currentValue.daily_arc_1 
+          + currentValue.daily_arc_2 
+          + currentValue.daily_arc_3 
+          + currentValue.daily_arc_4 
+          + currentValue.daily_arc_5 
+          + currentValue.daily_arc_6 
+          + currentValue.daily_arc_7 
+          + currentValue.daily_arc_8 
+          + currentValue.daily_arc_9 
+          , 0),
+        'デイリー（6次）' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  
+            accumulator 
+          + currentValue.daily_aut_1 
+          + currentValue.daily_aut_2 
+          + currentValue.daily_aut_3 
+          + currentValue.daily_aut_4 
+          + currentValue.daily_aut_5 
+          + currentValue.daily_aut_6 
+          + currentValue.daily_aut_7 
+          + currentValue.daily_aut_8 
+          + currentValue.daily_aut_9 
+          , 0),
+      },
+      {
+        'content': '詳細',
+        'daily_arc_1' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_arc_1, 0),
+        'daily_arc_2' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_arc_2, 0),
+        'daily_arc_3' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_arc_3, 0),
+        'daily_arc_4' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_arc_4, 0),
+        'daily_arc_5' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_arc_5, 0),
+        'daily_arc_6' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_arc_6, 0),
+        'daily_arc_7' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_arc_7, 0),
+        'daily_arc_8' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_arc_8, 0),
+        'daily_arc_9' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_arc_9, 0),
+        'daily_aut_1' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_aut_1, 0),
+        'daily_aut_2' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_aut_2, 0),
+        'daily_aut_3' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_aut_3, 0),
+        'daily_aut_4' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_aut_4, 0),
+        'daily_aut_5' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_aut_5, 0),
+        'daily_aut_6' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_aut_6, 0),
+        'daily_aut_7' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_aut_7, 0),
+        'daily_aut_8' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_aut_8, 0),
+        'daily_aut_9' : levelSimulatorResult.records.reduce( (accumulator, currentValue) =>  accumulator + currentValue.daily_aut_9, 0),
+    }]
+  }
+
   const simulate = () => {
-    console.log("aaaaa")
-    console.log(form)
-    alert(JSON.stringify(form))
+    const result = simulator(form)
+    // alert(JSON.stringify(result.records.findLast( (item) => item)))
+
+    const finalLevel = result.records.findLast( (item) => item )?.currentLevel
+    const finalLevelPercent = result.records.findLast( (item) => item )?.currentExpPercent
+    setFinalLevel(finalLevel ? finalLevel : 0)
+    if (finalLevelPercent !== undefined){
+      setFinalLevelPercent(finalLevelPercent)
+    }
+
+    setLevelSimulatorResult(result)
+
+    // setLevelTransition(toLevelTransition(result))
+
   }
 
   return (
@@ -270,6 +371,108 @@ export default function Page() {
                         onCheckedChange={handleCheckboxChange("dailyArcane6")}
                       />
                       <Label htmlFor="エスフェラ">エスフェラ</Label>
+                    </Field>
+                    <Field orientation="horizontal">
+                      <Checkbox
+                        id="daily-arcane-7"
+                        name="dailyArcane7"
+                        checked={form.dailyArcane7}
+                        onCheckedChange={handleCheckboxChange("dailyArcane7")}
+                      />
+                      <Label htmlFor="ムーンブリッジ">ムーンブリッジ</Label>
+                    </Field>
+                    <Field orientation="horizontal">
+                      <Checkbox
+                        id="daily-arcane-8"
+                        name="dailyArcane8"
+                        checked={form.dailyArcane8}
+                        onCheckedChange={handleCheckboxChange("dailyArcane8")}
+                      />
+                      <Label htmlFor="苦痛の迷宮">苦痛の迷宮</Label>
+                    </Field>
+                    <Field orientation="horizontal">
+                      <Checkbox
+                        id="daily-arcane-9"
+                        name="dailyArcane9"
+                        checked={form.dailyArcane9}
+                        onCheckedChange={handleCheckboxChange("dailyArcane9")}
+                      />
+                      <Label htmlFor="リメン">リメン</Label>
+                    </Field>
+
+                    <Separator />
+                    
+                    <Field orientation="horizontal">
+                      <Checkbox
+                        id="daily-authentic-1"
+                        name="dailyAuthentic1"
+                        checked={form.dailyAuthentic1}
+                        onCheckedChange={handleCheckboxChange("dailyAuthentic1")}
+                      />
+                      <Label htmlFor="セルニウム">セルニウム</Label>
+                    </Field>
+                    <Field orientation="horizontal">
+                      <Checkbox
+                        id="daily-authentic-2"
+                        name="dailyAuthentic2"
+                        checked={form.dailyAuthentic2}
+                        onCheckedChange={handleCheckboxChange("dailyAuthentic2")}
+                      />
+                      <Label htmlFor="ホテルアルクス">ホテルアルクス</Label>
+                    </Field>
+                    <Field orientation="horizontal">
+                      <Checkbox
+                        id="daily-authentic-3"
+                        name="dailyAuthentic3"
+                        checked={form.dailyAuthentic3}
+                        onCheckedChange={handleCheckboxChange("dailyAuthentic3")}
+                      />
+                      <Label htmlFor="オーディウム">オーディウム</Label>
+                    </Field>
+                    <Field orientation="horizontal">
+                      <Checkbox
+                        id="daily-authentic-4"
+                        name="dailyAuthentic4"
+                        checked={form.dailyAuthentic4}
+                        onCheckedChange={handleCheckboxChange("dailyAuthentic4")}
+                      />
+                      <Label htmlFor="桃源郷">桃源郷</Label>
+                    </Field>
+                    <Field orientation="horizontal">
+                      <Checkbox
+                        id="daily-authentic-5"
+                        name="dailyAuthentic5"
+                        checked={form.dailyAuthentic5}
+                        onCheckedChange={handleCheckboxChange("dailyAuthentic5")}
+                      />
+                      <Label htmlFor="アルテリア">アルテリア</Label>
+                    </Field>
+                    <Field orientation="horizontal">
+                      <Checkbox
+                        id="daily-authentic-6"
+                        name="dailyAuthentic6"
+                        checked={form.dailyAuthentic6}
+                        onCheckedChange={handleCheckboxChange("dailyAuthentic6")}
+                      />
+                      <Label htmlFor="カルシオン">カルシオン</Label>
+                    </Field>
+                    <Field orientation="horizontal">
+                      <Checkbox
+                        id="daily-authentic-7"
+                        name="dailyAuthentic7"
+                        checked={form.dailyAuthentic7}
+                        onCheckedChange={handleCheckboxChange("dailyAuthentic7")}
+                      />
+                      <Label htmlFor="タラハート">タラハート</Label>
+                    </Field>
+                    <Field orientation="horizontal" hidden>
+                      <Checkbox
+                        id="daily-authentic-8"
+                        name="dailyAuthentic8"
+                        checked={form.dailyAuthentic8}
+                        onCheckedChange={handleCheckboxChange("dailyAuthentic8")}
+                      />
+                      <Label htmlFor="ギアドラク">ギアドラク</Label>
                     </Field>
 
                     <Separator />
@@ -506,12 +709,12 @@ export default function Page() {
                 <CardHeader>
                   <CardDescription>到達レベル</CardDescription>
                   <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-                    275(12.34%)
+                    {finalLevel}({Intl.NumberFormat('ja-JP', {style: "percent", maximumFractionDigits: 3}).format(finalLevelPercent)})
                   </CardTitle>
                 </CardHeader>
               </Card>
-              <ChartExpSummary />
-              <ChartDateLevel />
+              <ChartExpSummary expSummaryChartData={toExpSummary(levelSimulatorResult)} />
+              <ChartDateLevel expSummaryChartData={toLevelTransition(levelSimulatorResult)} />
             {/* </div> */}
           </div>
         </div>

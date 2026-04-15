@@ -1,0 +1,1198 @@
+[
+  {
+    "currentlevel": 1,
+    "nextexp": 15
+  },
+  {
+    "currentlevel": 2,
+    "nextexp": 34
+  },
+  {
+    "currentlevel": 3,
+    "nextexp": 57
+  },
+  {
+    "currentlevel": 4,
+    "nextexp": 92
+  },
+  {
+    "currentlevel": 5,
+    "nextexp": 135
+  },
+  {
+    "currentlevel": 6,
+    "nextexp": 372
+  },
+  {
+    "currentlevel": 7,
+    "nextexp": 560
+  },
+  {
+    "currentlevel": 8,
+    "nextexp": 840
+  },
+  {
+    "currentlevel": 9,
+    "nextexp": 1242
+  },
+  {
+    "currentlevel": 10,
+    "nextexp": 1242
+  },
+  {
+    "currentlevel": 11,
+    "nextexp": 1242
+  },
+  {
+    "currentlevel": 12,
+    "nextexp": 1242
+  },
+  {
+    "currentlevel": 13,
+    "nextexp": 1242
+  },
+  {
+    "currentlevel": 14,
+    "nextexp": 1242
+  },
+  {
+    "currentlevel": 15,
+    "nextexp": 1490
+  },
+  {
+    "currentlevel": 16,
+    "nextexp": 1788
+  },
+  {
+    "currentlevel": 17,
+    "nextexp": 2145
+  },
+  {
+    "currentlevel": 18,
+    "nextexp": 2574
+  },
+  {
+    "currentlevel": 19,
+    "nextexp": 3088
+  },
+  {
+    "currentlevel": 20,
+    "nextexp": 3705
+  },
+  {
+    "currentlevel": 21,
+    "nextexp": 4446
+  },
+  {
+    "currentlevel": 22,
+    "nextexp": 5335
+  },
+  {
+    "currentlevel": 23,
+    "nextexp": 6402
+  },
+  {
+    "currentlevel": 24,
+    "nextexp": 7682
+  },
+  {
+    "currentlevel": 25,
+    "nextexp": 9218
+  },
+  {
+    "currentlevel": 26,
+    "nextexp": 11061
+  },
+  {
+    "currentlevel": 27,
+    "nextexp": 13273
+  },
+  {
+    "currentlevel": 28,
+    "nextexp": 15927
+  },
+  {
+    "currentlevel": 29,
+    "nextexp": 19112
+  },
+  {
+    "currentlevel": 30,
+    "nextexp": 19112
+  },
+  {
+    "currentlevel": 31,
+    "nextexp": 19112
+  },
+  {
+    "currentlevel": 32,
+    "nextexp": 19112
+  },
+  {
+    "currentlevel": 33,
+    "nextexp": 19112
+  },
+  {
+    "currentlevel": 34,
+    "nextexp": 19112
+  },
+  {
+    "currentlevel": 35,
+    "nextexp": 22934
+  },
+  {
+    "currentlevel": 36,
+    "nextexp": 27520
+  },
+  {
+    "currentlevel": 37,
+    "nextexp": 33024
+  },
+  {
+    "currentlevel": 38,
+    "nextexp": 39628
+  },
+  {
+    "currentlevel": 39,
+    "nextexp": 47553
+  },
+  {
+    "currentlevel": 40,
+    "nextexp": 51357
+  },
+  {
+    "currentlevel": 41,
+    "nextexp": 55465
+  },
+  {
+    "currentlevel": 42,
+    "nextexp": 59902
+  },
+  {
+    "currentlevel": 43,
+    "nextexp": 64694
+  },
+  {
+    "currentlevel": 44,
+    "nextexp": 69869
+  },
+  {
+    "currentlevel": 45,
+    "nextexp": 75458
+  },
+  {
+    "currentlevel": 46,
+    "nextexp": 81494
+  },
+  {
+    "currentlevel": 47,
+    "nextexp": 88013
+  },
+  {
+    "currentlevel": 48,
+    "nextexp": 95054
+  },
+  {
+    "currentlevel": 49,
+    "nextexp": 102658
+  },
+  {
+    "currentlevel": 50,
+    "nextexp": 110870
+  },
+  {
+    "currentlevel": 51,
+    "nextexp": 119739
+  },
+  {
+    "currentlevel": 52,
+    "nextexp": 129318
+  },
+  {
+    "currentlevel": 53,
+    "nextexp": 139663
+  },
+  {
+    "currentlevel": 54,
+    "nextexp": 150836
+  },
+  {
+    "currentlevel": 55,
+    "nextexp": 162902
+  },
+  {
+    "currentlevel": 56,
+    "nextexp": 175934
+  },
+  {
+    "currentlevel": 57,
+    "nextexp": 190008
+  },
+  {
+    "currentlevel": 58,
+    "nextexp": 205208
+  },
+  {
+    "currentlevel": 59,
+    "nextexp": 221624
+  },
+  {
+    "currentlevel": 60,
+    "nextexp": 221624
+  },
+  {
+    "currentlevel": 61,
+    "nextexp": 221624
+  },
+  {
+    "currentlevel": 62,
+    "nextexp": 221624
+  },
+  {
+    "currentlevel": 63,
+    "nextexp": 221624
+  },
+  {
+    "currentlevel": 64,
+    "nextexp": 221624
+  },
+  {
+    "currentlevel": 65,
+    "nextexp": 238245
+  },
+  {
+    "currentlevel": 66,
+    "nextexp": 256113
+  },
+  {
+    "currentlevel": 67,
+    "nextexp": 275321
+  },
+  {
+    "currentlevel": 68,
+    "nextexp": 295970
+  },
+  {
+    "currentlevel": 69,
+    "nextexp": 318167
+  },
+  {
+    "currentlevel": 70,
+    "nextexp": 342029
+  },
+  {
+    "currentlevel": 71,
+    "nextexp": 367681
+  },
+  {
+    "currentlevel": 72,
+    "nextexp": 395257
+  },
+  {
+    "currentlevel": 73,
+    "nextexp": 424901
+  },
+  {
+    "currentlevel": 74,
+    "nextexp": 456768
+  },
+  {
+    "currentlevel": 75,
+    "nextexp": 488741
+  },
+  {
+    "currentlevel": 76,
+    "nextexp": 522952
+  },
+  {
+    "currentlevel": 77,
+    "nextexp": 559558
+  },
+  {
+    "currentlevel": 78,
+    "nextexp": 598727
+  },
+  {
+    "currentlevel": 79,
+    "nextexp": 640637
+  },
+  {
+    "currentlevel": 80,
+    "nextexp": 685481
+  },
+  {
+    "currentlevel": 81,
+    "nextexp": 733464
+  },
+  {
+    "currentlevel": 82,
+    "nextexp": 784806
+  },
+  {
+    "currentlevel": 83,
+    "nextexp": 839742
+  },
+  {
+    "currentlevel": 84,
+    "nextexp": 898523
+  },
+  {
+    "currentlevel": 85,
+    "nextexp": 961419
+  },
+  {
+    "currentlevel": 86,
+    "nextexp": 1028718
+  },
+  {
+    "currentlevel": 87,
+    "nextexp": 1100728
+  },
+  {
+    "currentlevel": 88,
+    "nextexp": 1177778
+  },
+  {
+    "currentlevel": 89,
+    "nextexp": 1260222
+  },
+  {
+    "currentlevel": 90,
+    "nextexp": 1342136
+  },
+  {
+    "currentlevel": 91,
+    "nextexp": 1429374
+  },
+  {
+    "currentlevel": 92,
+    "nextexp": 1522283
+  },
+  {
+    "currentlevel": 93,
+    "nextexp": 1621231
+  },
+  {
+    "currentlevel": 94,
+    "nextexp": 1726611
+  },
+  {
+    "currentlevel": 95,
+    "nextexp": 1838840
+  },
+  {
+    "currentlevel": 96,
+    "nextexp": 1958364
+  },
+  {
+    "currentlevel": 97,
+    "nextexp": 2085657
+  },
+  {
+    "currentlevel": 98,
+    "nextexp": 2221224
+  },
+  {
+    "currentlevel": 99,
+    "nextexp": 2365603
+  },
+  {
+    "currentlevel": 100,
+    "nextexp": 2365603
+  },
+  {
+    "currentlevel": 101,
+    "nextexp": 2365603
+  },
+  {
+    "currentlevel": 102,
+    "nextexp": 2365603
+  },
+  {
+    "currentlevel": 103,
+    "nextexp": 2365603
+  },
+  {
+    "currentlevel": 104,
+    "nextexp": 2365603
+  },
+  {
+    "currentlevel": 105,
+    "nextexp": 2519367
+  },
+  {
+    "currentlevel": 106,
+    "nextexp": 2683125
+  },
+  {
+    "currentlevel": 107,
+    "nextexp": 2857528
+  },
+  {
+    "currentlevel": 108,
+    "nextexp": 3043267
+  },
+  {
+    "currentlevel": 109,
+    "nextexp": 3241079
+  },
+  {
+    "currentlevel": 110,
+    "nextexp": 3451749
+  },
+  {
+    "currentlevel": 111,
+    "nextexp": 3676112
+  },
+  {
+    "currentlevel": 112,
+    "nextexp": 3915059
+  },
+  {
+    "currentlevel": 113,
+    "nextexp": 4169537
+  },
+  {
+    "currentlevel": 114,
+    "nextexp": 4440556
+  },
+  {
+    "currentlevel": 115,
+    "nextexp": 4729192
+  },
+  {
+    "currentlevel": 116,
+    "nextexp": 5036589
+  },
+  {
+    "currentlevel": 117,
+    "nextexp": 5363967
+  },
+  {
+    "currentlevel": 118,
+    "nextexp": 5712624
+  },
+  {
+    "currentlevel": 119,
+    "nextexp": 6083944
+  },
+  {
+    "currentlevel": 120,
+    "nextexp": 6479400
+  },
+  {
+    "currentlevel": 121,
+    "nextexp": 6900561
+  },
+  {
+    "currentlevel": 122,
+    "nextexp": 7349097
+  },
+  {
+    "currentlevel": 123,
+    "nextexp": 7826788
+  },
+  {
+    "currentlevel": 124,
+    "nextexp": 8335529
+  },
+  {
+    "currentlevel": 125,
+    "nextexp": 8877338
+  },
+  {
+    "currentlevel": 126,
+    "nextexp": 9454364
+  },
+  {
+    "currentlevel": 127,
+    "nextexp": 10068897
+  },
+  {
+    "currentlevel": 128,
+    "nextexp": 10723375
+  },
+  {
+    "currentlevel": 129,
+    "nextexp": 11420394
+  },
+  {
+    "currentlevel": 130,
+    "nextexp": 12162719
+  },
+  {
+    "currentlevel": 131,
+    "nextexp": 12953295
+  },
+  {
+    "currentlevel": 132,
+    "nextexp": 13795259
+  },
+  {
+    "currentlevel": 133,
+    "nextexp": 14691950
+  },
+  {
+    "currentlevel": 134,
+    "nextexp": 15646926
+  },
+  {
+    "currentlevel": 135,
+    "nextexp": 16663976
+  },
+  {
+    "currentlevel": 136,
+    "nextexp": 17747134
+  },
+  {
+    "currentlevel": 137,
+    "nextexp": 18900697
+  },
+  {
+    "currentlevel": 138,
+    "nextexp": 20129242
+  },
+  {
+    "currentlevel": 139,
+    "nextexp": 21437642
+  },
+  {
+    "currentlevel": 140,
+    "nextexp": 22777494
+  },
+  {
+    "currentlevel": 141,
+    "nextexp": 24201087
+  },
+  {
+    "currentlevel": 142,
+    "nextexp": 25713654
+  },
+  {
+    "currentlevel": 143,
+    "nextexp": 27320757
+  },
+  {
+    "currentlevel": 144,
+    "nextexp": 29028304
+  },
+  {
+    "currentlevel": 145,
+    "nextexp": 30842573
+  },
+  {
+    "currentlevel": 146,
+    "nextexp": 32770233
+  },
+  {
+    "currentlevel": 147,
+    "nextexp": 34818372
+  },
+  {
+    "currentlevel": 148,
+    "nextexp": 36994520
+  },
+  {
+    "currentlevel": 149,
+    "nextexp": 39306677
+  },
+  {
+    "currentlevel": 150,
+    "nextexp": 41763344
+  },
+  {
+    "currentlevel": 151,
+    "nextexp": 44373553
+  },
+  {
+    "currentlevel": 152,
+    "nextexp": 47146900
+  },
+  {
+    "currentlevel": 153,
+    "nextexp": 50093581
+  },
+  {
+    "currentlevel": 154,
+    "nextexp": 53224429
+  },
+  {
+    "currentlevel": 155,
+    "nextexp": 56550955
+  },
+  {
+    "currentlevel": 156,
+    "nextexp": 60085389
+  },
+  {
+    "currentlevel": 157,
+    "nextexp": 63840725
+  },
+  {
+    "currentlevel": 158,
+    "nextexp": 67830770
+  },
+  {
+    "currentlevel": 159,
+    "nextexp": 72070193
+  },
+  {
+    "currentlevel": 160,
+    "nextexp": 76574580
+  },
+  {
+    "currentlevel": 161,
+    "nextexp": 81360491
+  },
+  {
+    "currentlevel": 162,
+    "nextexp": 86445521
+  },
+  {
+    "currentlevel": 163,
+    "nextexp": 91848366
+  },
+  {
+    "currentlevel": 164,
+    "nextexp": 97588888
+  },
+  {
+    "currentlevel": 165,
+    "nextexp": 103688193
+  },
+  {
+    "currentlevel": 166,
+    "nextexp": 110168705
+  },
+  {
+    "currentlevel": 167,
+    "nextexp": 117054249
+  },
+  {
+    "currentlevel": 168,
+    "nextexp": 124370139
+  },
+  {
+    "currentlevel": 169,
+    "nextexp": 132143272
+  },
+  {
+    "currentlevel": 170,
+    "nextexp": 138750435
+  },
+  {
+    "currentlevel": 171,
+    "nextexp": 145687956
+  },
+  {
+    "currentlevel": 172,
+    "nextexp": 152972353
+  },
+  {
+    "currentlevel": 173,
+    "nextexp": 160620970
+  },
+  {
+    "currentlevel": 174,
+    "nextexp": 168652018
+  },
+  {
+    "currentlevel": 175,
+    "nextexp": 177084618
+  },
+  {
+    "currentlevel": 176,
+    "nextexp": 185938848
+  },
+  {
+    "currentlevel": 177,
+    "nextexp": 195235790
+  },
+  {
+    "currentlevel": 178,
+    "nextexp": 204997579
+  },
+  {
+    "currentlevel": 179,
+    "nextexp": 215247457
+  },
+  {
+    "currentlevel": 180,
+    "nextexp": 226009829
+  },
+  {
+    "currentlevel": 181,
+    "nextexp": 237310320
+  },
+  {
+    "currentlevel": 182,
+    "nextexp": 249175836
+  },
+  {
+    "currentlevel": 183,
+    "nextexp": 261634627
+  },
+  {
+    "currentlevel": 184,
+    "nextexp": 274716358
+  },
+  {
+    "currentlevel": 185,
+    "nextexp": 288452175
+  },
+  {
+    "currentlevel": 186,
+    "nextexp": 302874783
+  },
+  {
+    "currentlevel": 187,
+    "nextexp": 318018522
+  },
+  {
+    "currentlevel": 188,
+    "nextexp": 333919448
+  },
+  {
+    "currentlevel": 189,
+    "nextexp": 350615420
+  },
+  {
+    "currentlevel": 190,
+    "nextexp": 368146191
+  },
+  {
+    "currentlevel": 191,
+    "nextexp": 386553500
+  },
+  {
+    "currentlevel": 192,
+    "nextexp": 405881175
+  },
+  {
+    "currentlevel": 193,
+    "nextexp": 426175233
+  },
+  {
+    "currentlevel": 194,
+    "nextexp": 447483994
+  },
+  {
+    "currentlevel": 195,
+    "nextexp": 469858193
+  },
+  {
+    "currentlevel": 196,
+    "nextexp": 493351102
+  },
+  {
+    "currentlevel": 197,
+    "nextexp": 518018657
+  },
+  {
+    "currentlevel": 198,
+    "nextexp": 543919589
+  },
+  {
+    "currentlevel": 199,
+    "nextexp": 571115568
+  },
+  {
+    "currentlevel": 200,
+    "nextexp": 2207026470
+  },
+  {
+    "currentlevel": 201,
+    "nextexp": 2471869646
+  },
+  {
+    "currentlevel": 202,
+    "nextexp": 2768494003
+  },
+  {
+    "currentlevel": 203,
+    "nextexp": 3100713283
+  },
+  {
+    "currentlevel": 204,
+    "nextexp": 3472798876
+  },
+  {
+    "currentlevel": 205,
+    "nextexp": 3889534741
+  },
+  {
+    "currentlevel": 206,
+    "nextexp": 4356278909
+  },
+  {
+    "currentlevel": 207,
+    "nextexp": 4879032378
+  },
+  {
+    "currentlevel": 208,
+    "nextexp": 5464516263
+  },
+  {
+    "currentlevel": 209,
+    "nextexp": 6120258214
+  },
+  {
+    "currentlevel": 210,
+    "nextexp": 7956335678
+  },
+  {
+    "currentlevel": 211,
+    "nextexp": 8831532602
+  },
+  {
+    "currentlevel": 212,
+    "nextexp": 9803001188
+  },
+  {
+    "currentlevel": 213,
+    "nextexp": 10881331318
+  },
+  {
+    "currentlevel": 214,
+    "nextexp": 12078277762
+  },
+  {
+    "currentlevel": 215,
+    "nextexp": 15701761090
+  },
+  {
+    "currentlevel": 216,
+    "nextexp": 17114919588
+  },
+  {
+    "currentlevel": 217,
+    "nextexp": 18655262350
+  },
+  {
+    "currentlevel": 218,
+    "nextexp": 20334235961
+  },
+  {
+    "currentlevel": 219,
+    "nextexp": 22164317197
+  },
+  {
+    "currentlevel": 220,
+    "nextexp": 28813612356
+  },
+  {
+    "currentlevel": 221,
+    "nextexp": 30830565220
+  },
+  {
+    "currentlevel": 222,
+    "nextexp": 32988704785
+  },
+  {
+    "currentlevel": 223,
+    "nextexp": 35297914119
+  },
+  {
+    "currentlevel": 224,
+    "nextexp": 37768768107
+  },
+  {
+    "currentlevel": 225,
+    "nextexp": 49099398539
+  },
+  {
+    "currentlevel": 226,
+    "nextexp": 52536356436
+  },
+  {
+    "currentlevel": 227,
+    "nextexp": 56213901386
+  },
+  {
+    "currentlevel": 228,
+    "nextexp": 60148874483
+  },
+  {
+    "currentlevel": 229,
+    "nextexp": 64359295696
+  },
+  {
+    "currentlevel": 230,
+    "nextexp": 83667084404
+  },
+  {
+    "currentlevel": 231,
+    "nextexp": 86177096936
+  },
+  {
+    "currentlevel": 232,
+    "nextexp": 88762409844
+  },
+  {
+    "currentlevel": 233,
+    "nextexp": 91425282139
+  },
+  {
+    "currentlevel": 234,
+    "nextexp": 94168040603
+  },
+  {
+    "currentlevel": 235,
+    "nextexp": 122418452783
+  },
+  {
+    "currentlevel": 236,
+    "nextexp": 126091006366
+  },
+  {
+    "currentlevel": 237,
+    "nextexp": 129873736556
+  },
+  {
+    "currentlevel": 238,
+    "nextexp": 133769948652
+  },
+  {
+    "currentlevel": 239,
+    "nextexp": 137783047111
+  },
+  {
+    "currentlevel": 240,
+    "nextexp": 179117961244
+  },
+  {
+    "currentlevel": 241,
+    "nextexp": 184491500081
+  },
+  {
+    "currentlevel": 242,
+    "nextexp": 190026245083
+  },
+  {
+    "currentlevel": 243,
+    "nextexp": 195727032435
+  },
+  {
+    "currentlevel": 244,
+    "nextexp": 201598843408
+  },
+  {
+    "currentlevel": 245,
+    "nextexp": 262078496430
+  },
+  {
+    "currentlevel": 246,
+    "nextexp": 269940851322
+  },
+  {
+    "currentlevel": 247,
+    "nextexp": 278039076861
+  },
+  {
+    "currentlevel": 248,
+    "nextexp": 286380249166
+  },
+  {
+    "currentlevel": 249,
+    "nextexp": 294971656640
+  },
+  {
+    "currentlevel": 250,
+    "nextexp": 442457484960
+  },
+  {
+    "currentlevel": 251,
+    "nextexp": 455731209508
+  },
+  {
+    "currentlevel": 252,
+    "nextexp": 469403145793
+  },
+  {
+    "currentlevel": 253,
+    "nextexp": 483485240166
+  },
+  {
+    "currentlevel": 254,
+    "nextexp": 497989797370
+  },
+  {
+    "currentlevel": 255,
+    "nextexp": 512929491291
+  },
+  {
+    "currentlevel": 256,
+    "nextexp": 528317376029
+  },
+  {
+    "currentlevel": 257,
+    "nextexp": 544166897309
+  },
+  {
+    "currentlevel": 258,
+    "nextexp": 560491904228
+  },
+  {
+    "currentlevel": 259,
+    "nextexp": 577306661354
+  },
+  {
+    "currentlevel": 260,
+    "nextexp": 1731919984062
+  },
+  {
+    "currentlevel": 261,
+    "nextexp": 1749239183902
+  },
+  {
+    "currentlevel": 262,
+    "nextexp": 1766731575741
+  },
+  {
+    "currentlevel": 263,
+    "nextexp": 1784398891498
+  },
+  {
+    "currentlevel": 264,
+    "nextexp": 1802242880412
+  },
+  {
+    "currentlevel": 265,
+    "nextexp": 2342915744535
+  },
+  {
+    "currentlevel": 266,
+    "nextexp": 2366344901980
+  },
+  {
+    "currentlevel": 267,
+    "nextexp": 2390008350999
+  },
+  {
+    "currentlevel": 268,
+    "nextexp": 2413908434508
+  },
+  {
+    "currentlevel": 269,
+    "nextexp": 2438047518853
+  },
+  {
+    "currentlevel": 270,
+    "nextexp": 5412465491851
+  },
+  {
+    "currentlevel": 271,
+    "nextexp": 5466590146770
+  },
+  {
+    "currentlevel": 272,
+    "nextexp": 5521256048237
+  },
+  {
+    "currentlevel": 273,
+    "nextexp": 5576468608720
+  },
+  {
+    "currentlevel": 274,
+    "nextexp": 5632233294807
+  },
+  {
+    "currentlevel": 275,
+    "nextexp": 11377111255510
+  },
+  {
+    "currentlevel": 276,
+    "nextexp": 12514822381061
+  },
+  {
+    "currentlevel": 277,
+    "nextexp": 13766304619167
+  },
+  {
+    "currentlevel": 278,
+    "nextexp": 15142935081084
+  },
+  {
+    "currentlevel": 279,
+    "nextexp": 16657228589191
+  },
+  {
+    "currentlevel": 280,
+    "nextexp": 33647601750165
+  },
+  {
+    "currentlevel": 281,
+    "nextexp": 37012361925183
+  },
+  {
+    "currentlevel": 282,
+    "nextexp": 40713598117701
+  },
+  {
+    "currentlevel": 283,
+    "nextexp": 44784957929471
+  },
+  {
+    "currentlevel": 284,
+    "nextexp": 49263453722418
+  },
+  {
+    "currentlevel": 285,
+    "nextexp": 99512176519285
+  },
+  {
+    "currentlevel": 286,
+    "nextexp": 109463394171214
+  },
+  {
+    "currentlevel": 287,
+    "nextexp": 120409733588335
+  },
+  {
+    "currentlevel": 288,
+    "nextexp": 132450706947169
+  },
+  {
+    "currentlevel": 289,
+    "nextexp": 145695777641870
+  },
+  {
+    "currentlevel": 290,
+    "nextexp": 294305470836608
+  },
+  {
+    "currentlevel": 291,
+    "nextexp": 323736017920269
+  },
+  {
+    "currentlevel": 292,
+    "nextexp": 356109619712296
+  },
+  {
+    "currentlevel": 293,
+    "nextexp": 391720581683526
+  },
+  {
+    "currentlevel": 294,
+    "nextexp": 430892639851879
+  },
+  {
+    "currentlevel": 295,
+    "nextexp": 870403132500795
+  },
+  {
+    "currentlevel": 296,
+    "nextexp": 957443445750874
+  },
+  {
+    "currentlevel": 297,
+    "nextexp": 1053187790325960
+  },
+  {
+    "currentlevel": 298,
+    "nextexp": 1158506569358560
+  },
+  {
+    "currentlevel": 299,
+    "nextexp": 1737759854037840
+  }
+]

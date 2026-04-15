@@ -20,15 +20,32 @@ import {
 
 export const description = "A linear line chart"
 
-const chartData = [
-  { date: "2026-04-01", level: 200 },
-  { date: "2026-04-02", level: 250 },
-  { date: "2026-04-03", level: 275 },
-  { date: "2026-04-04", level: 300 },
-]
+// const chartData = [
+//   { date: "2026-04-01", level: 200 },
+//   { date: "2026-04-02", level: 250 },
+//   { date: "2026-04-03", level: 275 },
+//   { date: "2026-04-04", level: 300 },
+// ]
+export type ExpSummaryChartData = {
+  expSummaryChartData: Array<{
+    date: string,
+    level: number
+  }>
+}
 
-const levelTicks = (() => {
-  const values = chartData.map((item) => item.level)
+
+
+const chartConfig = {
+  level: {
+    label: "level",
+    color: "var(--chart-1)",
+  },
+} satisfies ChartConfig
+
+export function ChartDateLevel({expSummaryChartData}: ExpSummaryChartData) {
+
+  const levelTicks = (() => {
+  const values = expSummaryChartData.map((item) => item.level)
   const min = Math.floor(Math.min(...values) / 5) * 5
   const max = Math.ceil(Math.max(...values) / 5) * 5
   const ticks = []
@@ -40,14 +57,6 @@ const levelTicks = (() => {
   return ticks
 })()
 
-const chartConfig = {
-  level: {
-    label: "level",
-    color: "var(--chart-1)",
-  },
-} satisfies ChartConfig
-
-export function ChartDateLevel() {
   return (
     <Card>
       <CardHeader>
@@ -57,7 +66,7 @@ export function ChartDateLevel() {
         <ChartContainer config={chartConfig} className="h-96 w-full">
           <LineChart
             accessibilityLayer
-            data={chartData}
+            data={expSummaryChartData}
             margin={{
               left: 12,
               right: 60,
@@ -80,7 +89,7 @@ export function ChartDateLevel() {
             />
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent hideLabel />}
+              content={<ChartTooltipContent />}
             />
             <Line
               dataKey="level"
