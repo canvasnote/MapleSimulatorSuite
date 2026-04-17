@@ -4,6 +4,7 @@ import { GalleryVerticalEnd } from "lucide-react"
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarHeader,
   SidebarMenu,
@@ -16,6 +17,7 @@ import {
 } from "@/components/ui/sidebar"
 
 import { Analytics } from "@vercel/analytics/next"
+import { Card, CardContent } from "./ui/card"
 
 // This is sample data.
 const data = {
@@ -102,6 +104,18 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarGroup>
       </SidebarContent>
       <SidebarRail />
+      <SidebarFooter>
+        <Card>
+          <CardContent>
+            created by <a
+              href="https://x.com/canvasnote"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
+            >@canvasnote</a>
+          </CardContent>
+        </Card>
+      </SidebarFooter>
     </Sidebar>
   )
 }
