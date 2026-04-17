@@ -15,6 +15,8 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 
+import { Analytics } from "@vercel/analytics/next"
+
 // This is sample data.
 const data = {
   navMain: [
@@ -55,6 +57,7 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
+      <Analytics/>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
