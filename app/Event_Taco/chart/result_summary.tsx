@@ -10,7 +10,7 @@ import {
 
 import { SimulationSummary } from "@/app/Event_Taco/simulation"
 
-export function ResultSumamry({eachLevel, averageSolErda, averageSolErdaAura, averageSolErdaFragment, averageAdvancedEXPTicket, rewardedCount, escapedCount}: SimulationSummary) {
+export function ResultSumamry({eachLevel, averageSolErda, averageSolErdaAura, averageSolErdaFragment, averageAdvancedEXPTicket, rewardedCount, escapedCount, averageMobDefeat}: SimulationSummary) {
     return (<div  className="flex flex-1 flex-col gap-4 p-4">
         <div className="grid auto-rows-min gap-4 md:grid-cols-1">
             <Table  className="w-[300px]">
@@ -22,6 +22,8 @@ export function ResultSumamry({eachLevel, averageSolErda, averageSolErdaAura, av
                     
                     <TableHead>報酬受領回数</TableHead>
                     <TableHead>逃走回数</TableHead>
+
+                    <TableHead>平均Mob討伐数(タコ1匹あたり)</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -32,6 +34,8 @@ export function ResultSumamry({eachLevel, averageSolErda, averageSolErdaAura, av
 
                     <TableCell className="text-right">{rewardedCount}</TableCell>
                     <TableCell className="text-right">{escapedCount}</TableCell>
+
+                    <TableCell className="text-right">{averageMobDefeat}</TableCell>
                     </TableRow>
                 </TableBody>
             </Table>

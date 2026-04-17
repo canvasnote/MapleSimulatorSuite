@@ -41,6 +41,7 @@ class SimulationResult {
             const averageAdvancedEXPTicket   = eachLevel.reduce((accumulator, item) => accumulator + item.AdvancedEXPTicket * item.achivedCount, 0) / records.length
             const rewardedCount              = records.filter((record) => record.tacoEscaped === false).length
             const escapedCount               = records.filter((record) => record.tacoEscaped === true ).length
+            const averageMobDefeat           = records.reduce((accumulator, item) => accumulator + item.huntedMobCount, 0) / records.length
 
             return {
                 eachLevel: eachLevel,
@@ -50,6 +51,7 @@ class SimulationResult {
                 averageAdvancedEXPTicket: averageAdvancedEXPTicket,
                 rewardedCount: rewardedCount,
                 escapedCount: escapedCount,
+                averageMobDefeat: averageMobDefeat,
             }
         }
     }
@@ -74,6 +76,7 @@ export type SimulationSummary = {
     averageAdvancedEXPTicket: number,
     rewardedCount: number,
     escapedCount: number,
+    averageMobDefeat: number,
 }
 
 let execSimulation = (form: FormState, setSimulationResult: Dispatch<SetStateAction<SimulationResult>>): SimulationResult => {
@@ -211,6 +214,7 @@ export default function Simulation({ form, setForm }: UiSettingsProps) {
                             averageSolErdaFragment={simulationResult.toSummary().averageSolErdaFragment} 
                             rewardedCount={simulationResult.toSummary().rewardedCount} 
                             escapedCount={simulationResult.toSummary().escapedCount} 
+                            averageMobDefeat={simulationResult.toSummary().averageMobDefeat} 
                         />
                     </CardContent>
                 </Card>
