@@ -20,16 +20,16 @@ import { Analytics } from "@vercel/analytics/next"
 // This is sample data.
 const data = {
   navMain: [
-    // {
-    //   title: "Home",
-    //   url: "#",
-    //   items: [
-    //     {
-    //       title: "ホーム",
-    //       url: "/",
-    //     },
-    //   ],
-    // },
+    {
+      title: "Home",
+      url: "#",
+      items: [
+        {
+          title: "ホーム",
+          url: "/",
+        },
+      ],
+    },
     // {
     //   title: "Character",
     //   url: "#",
