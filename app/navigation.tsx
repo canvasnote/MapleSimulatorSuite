@@ -21,6 +21,9 @@ export default function Navigation() {
                     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                         <Link href="/Leveling">レベリング</Link>
                     </NavigationMenuLink>
+                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                        <Link href="/Event_Taco">黄金タコ</Link>
+                    </NavigationMenuLink>
                 </NavigationMenuItem>
             </NavigationMenuList>
         </NavigationMenu>

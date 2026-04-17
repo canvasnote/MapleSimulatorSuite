@@ -18,23 +18,33 @@ import {
 // This is sample data.
 const data = {
   navMain: [
+    // {
+    //   title: "Home",
+    //   url: "#",
+    //   items: [
+    //     {
+    //       title: "ホーム",
+    //       url: "/",
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Character",
+    //   url: "#",
+    //   items: [
+    //     {
+    //       title: "レベリング",
+    //       url: "Leveling",
+    //     },
+    //   ],
+    // },
     {
-      title: "Home",
+      title: "Event",
       url: "#",
       items: [
         {
-          title: "ホーム",
-          url: "/",
-        },
-      ],
-    },
-    {
-      title: "Character",
-      url: "#",
-      items: [
-        {
-          title: "レベリング",
-          url: "Leveling",
+          title: "黄金タコ",
+          url: "Event_Taco",
         },
       ],
     },
